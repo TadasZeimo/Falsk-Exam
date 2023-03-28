@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+{{ super() }}
+
+<div class='login-form'>
+    <form action="/login" method="post" class="form-add">
+
+        {{ form.hidden_tag() }}
+            
+        <p style="margin-bottom: 20px; font-size: xx-large;">Login</p>
+            
+        {% for cat, msg in get_flashed_messages(True) %}
+        <div class="flash {{cat}}">{{msg}}</div>   
+        {% endfor %}
+            
+        <p>{{ form.email.label() }} {{ form.email() }}</p>
+        <p>{{ form.password.label() }} {{ form.password() }}</p>
+            
+            {{ form.submit }}
+        <hr style="width:21.5rem;text-align:left;margin-left:0">
+        <p>Don't have an account? <a href="/register">Register</a></p>
+    </form>
+</div>
+
+{% endblock %}

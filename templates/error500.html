@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+
+{% block content %}
+{{ super() }}
+ 
+    <h1 class="error-500" style='text-align: center;'> 
+        Only registered users have access!!!
+    </h1>
+    <h3 style='text-align: center;'><a href="/login">LOGIN</a></h3>  
+
+{% endblock %}

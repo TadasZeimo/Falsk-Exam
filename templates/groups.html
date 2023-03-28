@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+{{ super() }}
+
+<div style="font-size: large; text-align: center; align-item: center; margin-top: 3%;">
+    <h3>Select Your Group</h3>
+        {% for cat, msg in get_flashed_messages(True) %}
+        <div class="flash {{cat}}" style="margin: 1% 0 -2% 42%">{{msg}}</div>   
+        {% endfor %}
+</div>
+
+<div class='group-data-from-db'>
+
+    {% for data in dataGroupsDB %}
+
+    <a href="{{ url_for('bills', title=data.id)}}" class=''>
+        <h1>ID: {{data.id}}</h1>
+        <p>Your Trip to {{data.name}}</p>
+    </a>
+   
+    {% endfor %} 
+
+</div>
+
+<div class='login-form'>
+    <form action="" method="post" class="form-add">
+
+        {{ form.hidden_tag() }}
+        
+        <p style="font-size: large;">Add group</p>
+        <p>{{ form.groupId.label() }} {{ form.groupId() }}</p>
+        
+        {{ form.submit }} <br>
+
+        <label style="margin-top: 10px;"><a href="{{ url_for('logout')}}">LOGOUT</a></label>
+        
+    </form>
+
+</div>
+{% endblock %}

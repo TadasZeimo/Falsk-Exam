@@ -1,0 +1,48 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+{{ super() }}
+
+<div style="font-size: large; text-align: center; margin-top: 3%; margin-left: 25%; margin-right: 25%; ">
+    <h3>Group's bills</h3>
+
+
+<table class="table" style='margin-top: 3%'>
+    <tr>
+        <th>ID</th>
+        <th>Description</th>
+        <th>Amount</th>
+    </tr>
+    
+    {% for data in dataBillsDB %}
+        <tr>
+            <td>{{data.id}}</td>
+            <td>{{data.discription}}</td>
+            <td>{{data.amount}} €</td>
+        </tr>
+    
+    {% endfor %}  
+</table> 
+
+</div>
+
+<div class='login-form'>
+    <form action="/<string:title>" method="post" class="form-add">
+
+        {{ form.hidden_tag() }}
+        
+        <p style="font-size: large;">Add bill</p>
+        
+        <p>{{ form.amout.label() }} {{ form.amout() }}</p>
+        <p>{{ form.discription.label() }} {{ form.discription() }}</p>
+        <p hidden>{{ form.groupid.label() }} {{ form.groupid(value = title) }}</p>
+        
+        {{ form.submit }} <br>
+
+        <label style="margin-top: 10px;"><a href="{{ url_for('logout')}}">LOGOUT</a></label>
+    </form>
+   
+
+</div>
+{% endblock %}

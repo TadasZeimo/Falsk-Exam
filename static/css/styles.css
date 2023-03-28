@@ -1,0 +1,118 @@
+html, body { 
+	font-family: 'Arial';
+	/* margin: 0;
+	padding: 0;
+	height: 100%;
+	width: 100%; */
+}
+
+/* # ---------------------------------------------------------------------------------------------------------------------------------- */
+
+.base-title {
+	margin-top: 50px;
+	text-align: center;
+}
+
+.base-title img, p, h1 {
+	margin-top: 20px;
+	/* font-size: x-large; */
+
+}
+
+/* # ---------------------------------------------------------------------------------------------------------------------------------- */
+ul.mainmenu {
+	list-style: none;
+	background: #D3D3D3;
+	height: 60px;
+	margin: 0;
+	padding: 0;
+	color: 	#008B8B;
+	font-size: 20px;
+	overflow: hidden;
+}
+ul.mainmenu li {
+	float: left;
+	margin: 18px 40px 0 50px;
+}
+ul.mainmenu li.last {float: right;}
+
+ul.mainmenu li a {
+	color: 	#008B8B;
+	text-decoration: none;
+}
+ul.mainmenu li a:hover {
+	color: #100955;
+}
+/* # ---------------------------------------------------------------------------------------------------------------------------------- */
+.login-form {
+	margin-top: 50px;
+	margin-bottom: 1%;
+	display: flex;
+	justify-content: center;
+}
+
+.form-add {
+	width: max-content;
+	font-size: large;
+
+}
+
+
+.form-add label {
+	display: inline-block; 
+	min-width: 110px;
+}
+
+/* .form-add2 label {
+	display: inline-block; 
+	min-width: 140px;
+} */
+/* # ---------------------------------------------------------------------------------------------------------------------------------- */
+
+.group-data-from-db {
+	height: max-content;
+	margin: 50px 10% 0 10%;
+	display: flex;
+	flex-wrap: wrap;
+	
+}
+
+
+.group-data-from-db a {
+	border: solid rgb(179, 169, 169);
+	width: 250px;
+	height: 150px;
+	text-align: center;
+	text-decoration: none;
+	color: black;
+	margin: 1%;
+
+}
+
+
+
+/* # ---------------------------------------------------------------------------------------------------------------------------------- */
+
+.flash {
+	padding: 10px;
+	margin-top: -10px;
+	width: 315px;
+}
+.flash.success {
+	border: 1px solid #21DB56;
+	background: #AEFFC5;
+}
+.flash.error {
+	border: 1px solid #FF4343;
+	background: #FF9C9C;
+}
+/* # ---------------------------------------------------------------------------------------------------------------------------------- */
+
+div.dataDB {
+	padding-top: 30px;
+	margin-left: 2%;
+}
+
+/* table.table, th, td {
+
+} */
