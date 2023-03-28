@@ -1,0 +1,5 @@
+Registred users email's and password's:
+
+user1@mail.com pass >>> 1
+user2@mail.com pass >>> 1
+user3@mail.com pass >>> 1
